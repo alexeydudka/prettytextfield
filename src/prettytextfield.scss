@@ -1,0 +1,86 @@
+@font-face {
+    font-family: EmojiOne;
+    src:url('fonts/emojione-svg.woff2') format('woff2'), url('fonts/emojione-svg.woff') format('woff'), url("'fonts/emojione-svg.otf") format("opentype");
+}
+
+@font-face {
+    font-family: EmojiOneAndroid;
+    src: url('fonts/emojione-android.ttf');
+}
+
+@font-face {
+    font-family: Symbola;
+    src: url('fonts/Symbola-Emoji.eot');
+    src: url('fonts/Symbola-Emoji.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Symbola-Emoji.ttf')  format('truetype'),
+         url('fonts/Symbola-Emoji.woff') format('woff');
+}
+
+.prettytextfield-show-text-container .prettytextfield-sng-in-show-text-container{display: inline-block;width: 28px;height: 28px;padding: 2px 5px;margin-bottom: -5px;fill: inherit;stroke: inherit;}
+.prettytextfield.emojione-font .prettytextfield-emoji-container, .prettytextfield-show-text-container.emojione-font, .prettytextfield.emojione-font .prettytextfield-text-container{font-family: Apple Color Emoji, Android Emoji, EmojiOne, Symbola, sans-serif;}
+.prettytextfield.emojione-android-font .prettytextfield-emoji-container, .prettytextfield-show-text-container.emojione-android-font, .prettytextfield.emojione-android-font .prettytextfield-text-container{font-family: Apple Color Emoji, Android Emoji, EmojiOneAndroid, sans-serif;}
+.prettytextfield{
+	float: left;width: 100%;position: relative;border: 1px solid #b3b3b3;box-sizing: border-box;padding: 10px 10px 0px 10px;
+	
+	& *:not(.prettytextfield-text-container){ -webkit-transition: all 200ms ease-in;-moz-transition: all 200ms ease-in;-o-transition: all 200ms ease-in;transition: all 200ms ease-in;box-sizing: border-box;outline: none;}
+	& .prettytextfield-text-container{
+		float: left;width: 100%;border: 0;max-width: 100%;color:#000;overflow: hidden;height: 300px;padding: 0;
+		&.prettytextfield-text-container-initiated{display: block;}
+		&::-webkit-input-placeholder {color:#858585;font-size: 16px;line-height: 24px;}
+		&::-moz-placeholder          {color:#858585;font-size: 16px;line-height: 24px;}
+		&:-moz-placeholder           {color:#858585;font-size: 16px;line-height: 24px;}
+		&:-ms-input-placeholder      {color:#858585;font-size: 16px;line-height: 24px;}
+	}
+	
+	
+	& .prettytextfield-image-button{
+		position: relative;
+		&:after{position: absolute;width: 100%;padding-top:100%;top: 50%;left: 50%;transform: translate(-50%, -50%);content: "";float: left;}
+		&.prettytextfield-smiles-and-people:after{background: url(icons/1f600.svg) no-repeat center/100% auto;}
+		&.prettytextfield-animals-and-nature:after{background: url(icons/1f436.svg) no-repeat center/100% auto;}
+		&.prettytextfield-food-and-drink:after{background: url(icons/1f37d.svg) no-repeat center/100% auto;}
+		&.prettytextfield-activity-and-sports:after{background: url(icons/26bd.svg) no-repeat center/100% auto;}
+		&.prettytextfield-travel-and-places:after{background: url(icons/1f698.svg) no-repeat center/100% auto;}
+		&.prettytextfield-objects:after{background: url(icons/1f4a1.svg) no-repeat center/100% auto;}
+		&.prettytextfield-symbols:after{background: url(icons/2049.svg) no-repeat center/100% auto;}
+		&.prettytextfield-flags:after{background: url(icons/1f3f4.svg) no-repeat center/100% auto;}
+		&.prettytextfield-popular-emojis:after{background: url(icons/1f4ab.svg) no-repeat center/100% auto;}
+	}
+
+
+	& .prettytextfield-box-wrap{
+		float: left;width: 100%;padding: 10px 0;
+		.prettytextfield-button{display:inline-block;width: 25px;height:25px;}
+	}
+	
+	& .prettytextfield-box{
+		float: left;width: 100%;padding-top: 10px;display: none;
+		&.active{display: block;}
+		.prettytextfield-box-title{
+			float: left;width: 100%;padding: 0 10px;box-sizing: content-box;margin-left: -10px;background: #f1f1f1;margin-bottom: 10px;
+			.prettytextfield-box-title-button{
+				float: left;width: 11.11%;padding-top: 11.11%;background-size: 60% auto;
+				&.prettytextfield-image-button:after{padding-top: 60%;width: 60%;}
+				&.active, &:hover{background-color: #fff;}
+			}
+		}
+		
+		.prettytextfield-emoji-container{
+			float: left;width: 100%;height:0px;text-align: center;overflow: hidden;opacity: 0;
+			&.active{height: auto;opacity: 1;}
+			.prettytextfield-emoji{
+				display:inline-block;width: 40px;height: 40px;padding: 5px;font-size: 25px;line-height: 27px;color: #000;text-decoration: none;float: left;
+				&:hover{padding: 2px;font-size: 32px;line-height: 36px;}
+				img{float: left;width: 100%;height: 100%;fill: inherit;stroke: inherit;}
+			}
+			
+		}
+	} 
+	.prettytextfield-char-counter{
+		float: right;font-size: 14px;line-height: 14px;color:#858585;margin-top: 7px;
+		&.warning, &.exceeded{background-color: #ffb300;padding: 10px 10px;width: 100%;font-size: 16px;font-weight: bold;color: #fff;text-align: center;margin:0 -10px 10px 0;box-sizing: content-box;}
+		&.exceeded{background-color: #a20202;}
+	}
+	
+	.prettytextfield-preload-font{float: left;overflow: hidden;width:1px;height:1px;font-size: 1px;color:#fff;}
+}
