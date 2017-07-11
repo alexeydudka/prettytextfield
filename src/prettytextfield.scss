@@ -20,7 +20,7 @@
 .prettytextfield.emojione-font .prettytextfield-emoji-container, .prettytextfield-show-text-container.emojione-font, .prettytextfield.emojione-font .prettytextfield-text-container{font-family: Apple Color Emoji, Android Emoji, EmojiOne, Symbola, sans-serif;}
 .prettytextfield.emojione-android-font .prettytextfield-emoji-container, .prettytextfield-show-text-container.emojione-android-font, .prettytextfield.emojione-android-font .prettytextfield-text-container{font-family: Apple Color Emoji, Android Emoji, EmojiOneAndroid, sans-serif;}
 .prettytextfield{
-	float: left;width: 100%;position: relative;border: 1px solid #b3b3b3;box-sizing: border-box;padding: 10px 10px 0px 10px;
+	float: left;width: 100%;position: relative;border: 1px solid #ebebeb;box-sizing: border-box;padding: 10px 10px 0px 10px;border-radius:5px;
 	
 	& *:not(.prettytextfield-text-container){ -webkit-transition: all 200ms ease-in;-moz-transition: all 200ms ease-in;-o-transition: all 200ms ease-in;transition: all 200ms ease-in;box-sizing: border-box;outline: none;}
 	& .prettytextfield-text-container{
