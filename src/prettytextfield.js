@@ -1545,10 +1545,13 @@
         }
         return true;
     }
-    
+
     function insertAtCaret(el, options) {
         var emoji = el.data("emojiutfcode");
         var el = el.closest(".prettytextfield").find(".prettytextfield-text-container");
+        var x = window.scrollX, y = window.scrollY;
+        el.focus();
+        window.scrollTo(x, y);
         el = el[0];
         if (document.selection) {
             var sel = document.selection.createRange();
